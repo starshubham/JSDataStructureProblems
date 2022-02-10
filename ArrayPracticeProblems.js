@@ -98,3 +98,74 @@ function getPrimeFactors(number) {
 let number = Math.floor(Math.random() * 1000);
 console.log("Prime Factors of " + number + " are : ");
 console.log(getPrimeFactors(number));
+
+
+// 4. Write a Program to show Sum of three Integer adds to ZERO
+// Given an array of distinct elements. The task is to find triplets in the array whose sum is zero.
+console.log("\n**** Problem No-4 ****")
+let sumToZero = () => {
+    console.log("Program to find sum of three digits add to zero");
+    let digitsArr = [0, -1, 2, -3, 1];
+    let n = digitsArr.length;
+    let found = false;
+    //check for 3 numbers sum to zero
+    for (let i = 0; i < n - 2; i++) {
+        for (let j = i + 1; j < n - 1; j++) {
+            for (let k = j + 1; k < n; k++) {
+                if (digitsArr[i] + digitsArr[j] + digitsArr[k] == 0) {
+                    console.log(`${digitsArr[i]}, ${digitsArr[j]}, ${digitsArr[k]}`);
+                    found = true;
+                }
+            }
+        }
+    }
+    if (found == false) {
+        console.log("Not Exists");
+    }
+}
+sumToZero();
+
+
+console.log("\n**** Alternate Method for Problem No-4 ****")
+// A simple Javascript program to find
+//three elements whose sum is equal to zero
+arr = [0, -1, 2, -3, 1];
+
+// Prints all triplets in arr[] with 0 sum   
+function findTriplets(arr) {
+    let found = false;
+    for (let i = 0; i < arr.length - 2; i++) {
+        for (let j = i + 1; j < arr.length - 1; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] == 0) {
+                    console.log(arr[i], arr[j], arr[k]);
+                    found = true;
+
+                }
+            }
+        }
+        // If no triplet with 0 sum found in array
+        if (found === false) {
+            document.write(" not exist ");
+        }
+    }
+}
+findTriplets(arr);   // Calling the function
+
+
+/* 5. Take a range from 0 – 100, find the digits that are repeated twice like 33, 77,
+      etc and store them in an array. */
+console.log("\n**** Problem No-5 ****")
+function isRepeated(number) {
+    if (number % 11 == 0)
+        return true;
+    else
+        return false;
+}
+
+let array = new Array();
+for (let i = 1; i < 100; i++) {
+    if (isRepeated(i))
+        array.push(i);
+}
+console.log(array);
