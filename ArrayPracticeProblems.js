@@ -1,10 +1,16 @@
-/* ### Array Practice Problems ### */
+/*              ### Array Practice Problems ### 
+An array is a systematic arrangement of the same type of data.
+But in java script Array is a variable which contains multiple values may
+be of same type or different type since by default in java script
+everything is treated as a string. An array is zero-based i.e. indexing start with 0.
+*/
 
 /* 1. Write a program in the following steps
 a. Generates 10 Random 3 Digit number. 
 b. Store this random numbers into a array. 
 c. Then find the 2nd largest and the 2nd smallest element without sorting the array. */
 
+console.log("\n**** Problem No-1 ****")
 function getThreeDigitRandomNumber() {
     return Math.floor((Math.random() * 900) + 100);
 }
